@@ -1,0 +1,2 @@
+- Ctrl+B：快速打开光标处的类或方法 
+- 快速键入for循环：http://blog.csdn.net/mingjie1212/article/details/51143444

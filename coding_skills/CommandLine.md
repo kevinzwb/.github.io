@@ -81,4 +81,65 @@
 - kill：终止指定进程
 - killall：终止指定程序
 
+# 环境
+*shell在环境中储存两种基本类型的数据，环境变量（除shell变量外的所有变量）和shell变量（由bash存放的少量数据）*
+
+- set：同时显示环境变量，shell变量
+- printenv：只显示环境变量
+- 使用echo查看单个变量的值
+
+*用户登录系统后，bash程序就会启动并读取一系列称为启动文件的配置脚本，这些脚本定义了所有用户共享的默认环境。
+接下来，bash会读取更多储存在主目录下的用于定义个人环境的启动文件*
+
+*步骤执行的确切顺序是由启动的shell会话类型决定的*
+- login shell：提示用户输入用户名和密码
+- non-login shell：会继承父类（通常为login shell）进程的环境。
+
+- 启动文件
+  - .bash_profile
+  - PATH变量通常是有启动文件/etc/profile中的一段代码设定
+  
+- 修改环境
+  - 在PATH添加目录，或者定义额外的环境变量，需要将这些更改放入到.bash_profile文件中，其他的改变应该录入.bashrc文件
+  - 使用文本编辑器。文本编辑器只支持纯文本，而且通常包含为编写程序而设计的特性。
+  - gedit/nano
+  - source：激活修改。 因为只有在启动shell会话时才会读取.bashrc，需要命令强制修改。
+  
+  
+# vi  （ not finished)
+- Why vi？
+  - UNIX系统兼容标准要求系统必须配备vi
+  - vi非常轻量，运行速度块
+ 
+ - vi:启动vi
+ - :q：vi退出
+ - :w: 保存文件
+ - A: 使vi进入插入模式，并自动将光标移动到行尾
+ - 删除文本
+ - 剪贴，复制，粘贴文本
+ - J：合并文本
+ 
+ 
+ # 定制提示符（skip）
+ 
+ # 软件包管理
+ *决定Linux发行版本质量最重要的因素是软件包系统和支持该发行版本社区的活力*
+ - 管理一种在系统上安装，维护软件的方法。
+ 
+ - apt-get update
+ - apt-cache search search_string:在库里查找软件包
+ - apt-get install package_name：安装软件包
+ - dpkg -install package_file：安装软件文件中的软件包
+ - apt-get remove package_name：删除软件包
+ - apt-get update/upgrade：更新软件包
+ - dpkg --list：列出已经安装的软件包
+ - dpkg --status package_name：判断软件包是否安装
+ - apt-cache show package_name:显示已安装软件包的相关信息
+ - dpkg --search file_name：查看某具体文件由哪个软件包安装得到
+ 
+ 
+ 
+ 
+ 
+
 

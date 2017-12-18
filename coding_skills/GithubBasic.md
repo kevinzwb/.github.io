@@ -30,3 +30,11 @@ $ git remote add origin https://github.com/kevinzwb/kevinzwb.github.io
 $ git pull origin master  
 $ git push origin master  
 ```
+
+## 本地远程同步
+```
+$  git commit -m 'commit content'
+$  git pull origin master  
+$  git push origin master  
+$  git status
+```

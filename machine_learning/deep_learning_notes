@@ -1,0 +1,18 @@
+# Linear Regression
+
+### Logistic Regression For Classification
+Find a linear hyperplane to separate the data, better that output the probability of class
+
+- Linear model: $$z(\boldsymbol{w},\boldsymbol{x}) = \boldsymbol{w} \cdot \boldsymbol{x}$$
+
+- Link Function: $$\hat{p}(z) = \frac{1}{1 + exp(-z)}$$
+
+- Cross entropy loss: $$l(y,\hat{p}) = ylog\hat{p} + ( 1 - y )log(1 - \hat{p} )$$
+
+- Cost Function: $$ L(\boldsymbol{w},\{\boldsymbol{x}_i,y_i\}^m_{i=1} )= \sum^m_{i =1} log(1 + exp(\boldsymbol{w} \cdot \boldsymbol{x}_i)) - y_i\boldsymbol{w} \cdot \boldsymbol{x}_i$$
+
+- Gradient: $$ \nabla_w  L(\boldsymbol{w},\{\boldsymbol{x}_i,y_i\}^m_{i=1} ) = (\frac{1}{1 +  exp(-\boldsymbol{w} \cdot \boldsymbol{x}_i)}- y_i)\boldsymbol{x}_i $$
+
+The backpropagation algorithm works through the layers of deeper neural networks to calculate error gradients w.r.t to weights
+
+###

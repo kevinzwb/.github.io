@@ -16,3 +16,4 @@ Find a linear hyperplane to separate the data, better that output the probabilit
 The backpropagation algorithm works through the layers of deeper neural networks to calculate error gradients w.r.t to weights
 
 ###
+![image][https://github.com/kevinzwb/kevinzwb.github.io/blob/master/machine_learning/figures/CNN_Networks.png]

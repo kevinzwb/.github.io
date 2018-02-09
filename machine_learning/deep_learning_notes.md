@@ -68,12 +68,20 @@ Count-based methods use the inner product or cosine as similarity kernel
 - count the basis vocabulary words occurring w words to the left or right of each instance of a target word in the corpus
 - form a vector representation of the target word based on these counts
 
-Neural Embedding Models
+### Neural Embedding Models
 - collect instances t_i \in inst(t) of a word t of vocab V
 - For each instance, collect its context words window c(t_i)
 - Define some score function score (t_i,c(t_i); \theta,E) with upper bound on output
 - Define a loss $$ L = -\sum_{t \in V} \sum_{t_i \in inst(t)} score(t_i, c(t_i); \theta, \mathbf{E}) $$
 - Esitimate  $$  \hat{\theta}, \hat{\mathbf{E}} = \mathop{\arg\min}_{(\theta,\mathbf{E})} L $$
 - Use the estimated E as the embedding matrix
+
+In Neural Embedding, the score is requried as:
+- produce a score which is a function of how well t_i is accounted for by c(t_i) and/ or vice versa
+- the word to account for the context more than another word in the same place
+- produces a loss which is differentiable w.r.t \theta and E
+
+### Attention
+![Attention](https://github.com/kevinzwb/kevinzwb.github.io/blob/master/machine_learning/figures/Attention.png)
 
 

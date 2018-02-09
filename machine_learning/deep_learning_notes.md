@@ -57,6 +57,23 @@ We then use the attention parameters **a** to determine a distribution Pr(g|a) o
 Introspective attention: with internal information we can do selective writing as well as reading, allowing the network to iteratively modify its state
 ![Turing_Machines](https://github.com/kevinzwb/kevinzwb.github.io/blob/master/machine_learning/figures/Turing_Machines.png)
 
+# DL for NLP
+Natural langauge texts mean sequences of discrete symbols.
 
+Asuumption: produce dense vector representations based on the context/use of words
+
+Count-based methods use the inner product or cosine as similarity kernel
+- define a basis vocabulary C of context words
+- define a word window size w
+- count the basis vocabulary words occurring w words to the left or right of each instance of a target word in the corpus
+- form a vector representation of the target word based on these counts
+
+Neural Embedding Models
+- collect instances t_i \in inst(t) of a word t of vocab V
+- For each instance, collect its context words window c(t_i)
+- Define some score function score (t_i,c(t_i); \theta,E) with upper bound on output
+- Define a loss $$ L = -\sum_{t \in V} \sum_{t_i \in inst(t)} score(t_i, c(t_i); \theta, \mathbf{E}) $$
+- Esitimate  $$  \hat{\theta}, \hat{\mathbf{E}} = \mathop{\arg\min}_{(\theta,\mathbf{E})} L $$
+- Use the estimated E as the embedding matrix
 
 
